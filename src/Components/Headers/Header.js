@@ -14,12 +14,22 @@ const Header = () => {
           <Nav to="userboard">Contact</Nav>
           <Button to="/signup">Get Started</Button>
         </Navigators>
+        <Div>
+          <Button to="/signup">Get Started</Button>
+        </Div>
       </Wrap>
     </Container>
   );
 }
 
 export default Header
+const Div = styled.div`
+display: none;
+
+@media (max-width: 800px){
+  display: flex;
+}
+`
 const Wrap = styled.div`
 width: 90%;
 display: flex;

@@ -65,17 +65,23 @@ font-size: 20px;
 margin: 20px 0;
 `
 const Card = styled.div`
-width:30%;
+width:250px;
 /* background: red; */
 color: #2e3097;
+margin: 0 20px;
 margin: 15px 0;
+
 `
-const Why = styled.div``
+const Why = styled.div`
+font-family: poppins;
+color: #f15f1f;
+font-size: 25px;
+`
 const Wrapper = styled.div`
   width: 90%;
   flex-wrap: wrap;
   color: #2e3097;
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
   padding: 0 20px;
 
@@ -90,5 +96,8 @@ const Container = styled.div`
 
   justify-content: center;
   align-items: center;
+  @media (max-width: 800px) {
+    margin: 30px 0;
+  }
   /* height */
 `;

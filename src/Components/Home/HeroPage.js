@@ -31,6 +31,9 @@ const Right = styled.div`
   /* flex: 2; */
   display: flex;
   width: 50%;
+  @media (max-width: 800px) {
+    width:100%;
+  }
 
   /* background: red; */
 `;
@@ -69,12 +72,17 @@ const Left = styled.div`
   /* flex:1; */
   /* background: red; */
   width: 40%;
-
   height: 100%;
   display: flex;
   justify-content: center;
   /* align-items: center; */
   flex-direction: column;
+  @media (max-width: 800px) {
+    width: 95%;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+  }
 `;
 
 
@@ -93,6 +101,9 @@ const Container = styled.div`
     rgba(134, 119, 218, 1) 203%,
     rgba(217, 217, 217, 1) 217%
   );
+  @media (max-width: 800px) {
+    height: 100%;
+  }
 `;
 const Wrapper = styled.div`
 width:80%;

@@ -45,20 +45,29 @@ color:#fff;
 /* background: #fff; */
 `;
 const Button = styled.div`
-/* padding: 10px 10px; */
-background: #2e3097;
-color:#fff;
-display: flex;
-align-items: center;
-/* justify-content:center; */
-height: 50px;
-width:20%;
-padding: 0 5px;
-border-radius: 4px;
-margin-top: 20px;
+  /* padding: 10px 10px; */
+  background: #2e3097;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  /* justify-content:center; */
+  height: 50px;
+  width: 20%;
+  padding: 0 5px;
+  border-radius: 4px;
+  margin-top: 20px;
+  transition: all 350ms;
 
-
-`
+  :hover {
+    transition: all 350ms;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  @media (max-width: 800px) {
+    width: 40%;
+    justify-content: center;
+  }
+`;
 const Image = styled.img`
   width: 350px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -74,11 +83,11 @@ const Two = styled.div`
   width: 90%;
   justify-content: space-between;
   /* background-color:red; */
-  align-items: center;
+  /* align-items: center; */
   @media (max-width: 800px) {
     flex-direction: column;
-    align-items: center;
-    justify-content:center;
+    /* align-items: center; */
+    /* justify-content:center; */
   }
 `;
 const Text1 = styled.div`
@@ -91,12 +100,15 @@ const Text = styled.div`
   color: #2e3097;
   /* width:70%; */
   margin-left: 50px;
-  line-height: 2.0;
+  line-height: 2;
   /* font-size: px; */
   /* background: pink; */
-  @media (max-width:800px){
+  @media (max-width: 800px) {
     display: flex;
-    justify-content:center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 0;
+
     /* align-items: center; */
     flex-direction: column;
   }
@@ -104,7 +116,7 @@ const Text = styled.div`
 const Top = styled.div`
   font-size: 19px;
   color: #f15f1f;
-
+margin: 30px 0;
 `;
 const Wrapper = styled.div`
 width:90%;
@@ -113,7 +125,9 @@ justify-content:center;
 /* align-items: center; */
 padding: 10px 0;
 flex-direction: column;
-
+@media (max-width: 800px) {
+  /* align-items: center; */
+}
 `
 const Container = styled.div`
 width: 100%;

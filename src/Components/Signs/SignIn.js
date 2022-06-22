@@ -1,49 +1,43 @@
-import React from "react"
-import styled from "styled-components"
-import {InSign} from "./SignHome"
-const SignIn = () => {
+import React from "react";
+import styled from "styled-components";
+// import {Link} from "react-router-dom"
+import { UpSign } from "./SignHome";
+// import fb from '../../facebooklogo.png'
+// import bg from "../../bg.jpg";
+
+// import {Link } from "react-router-dom"
+const SignUp = () => {
   return (
     <Container>
       <Wrap>
         <Right>
           <Bg>
             <Hold>
-              <Logo>E-Medi</Logo>
-              {/* <Image src={bg} /> */}
-
-              <P style={{ fontSize: "20px" }}>
-                Welcome User,
-                <br /> please sign in to continue
-                <br />
-              </P>
-              <br />
+              <Logo>Lab-Maint</Logo>
+              <P>Lab-Maint</P>
               {/* <Butt>
-                <img src={fb} />
+                <img alt="img" />
                 Continue with Facebook{" "}
               </Butt> */}
             </Hold>
           </Bg>
         </Right>
-        <Left>
-          <NavHold>
-            {/* to="/signin" */}
-            <Nav>New User</Nav>
-            {/* to="/" */}
-            <Nav>Already a User</Nav>
-          </NavHold>
-          <InSign />
-        </Left>
+        <Right>
+          <UpSign />
+        </Right>
       </Wrap>
     </Container>
   );
 };
-export default SignIn
+
+export default SignUp;
 const Image = styled.img`
   width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  background-color: darkorange;
+  background-color: #2e3097;
+
   margin-bottom: 20px;
 
   transition: all 350ms;
@@ -87,14 +81,14 @@ const Hold = styled.div`
 const Bg = styled.div`
   /* width: 100; */
   height: 100%;
-  background: darkorange;
-  opacity: 0.8;
+  /* background: darkorange; */
+  /* opacity: 0.8; */
 
   /* position: relative; */
 `;
 const Logo = styled.div`
   font-size: 35px;
-  font-family: forte;
+  font-family: Poppins;
   margin-bottom: 40px;
 `;
 const Container = styled.div`
@@ -102,36 +96,37 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-repeat: no-repeat;
   height: 100vh;
   color: #fff;
-  margin: 50px 0;
-
   display: flex;
-
-  background-image: url("/down.jpg");
+  /* margin:40px 0; */
 `;
 const Wrap = styled.div`
-  width: 60%;
-  height: 550px;
+  width: 100%;
+  height: calc(100vh - 70px);
   display: flex;
-
+  @media (max-width: 800px) {
+    width: 100%;
+    flex-direction: column;
+  }
   /* background: peachpuff; */
 `;
 const Right = styled.div`
-  width: 40%;
-  background-image: url("/down.jpg");
-  background-repeat: no-repeat;
+  width: 50%;
+  height: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: #2e3097;
   /* border */
-  background-position: center;
+  @media (max-width: 800px) {
+    flex: 1;
+  }
 `;
 const Left = styled.div`
   /* width: 50%; */
   flex: 1;
   background-color: #fff;
-
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
